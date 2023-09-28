@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Dynamic Colors-->
+    <color name="d_primary">#724EF8</color>
+    <color name="d_secondary">#AD97FF</color>
+    <color name="d_main_text">#DDDDDD</color>
+    <color name="d_secondary_text">#DDDDDD</color>
+    <color name="d_main_bg">#040C23</color>
+    <color name="d_secondary_bg">#121B37</color>
+    <color name="d_bottom_nav_view_icon">#798096</color>
+    <color name="d_bottom_nav_view_bg">#121B37</color>
+    <color name="d_siyrat_bg">#9985FF</color>
+    <color name="d_siyrat_icon">#7254FF</color>
+    <color name="d_salovat_bg">#00CC7E</color>
+    <color name="d_salovat_icon">#47FFB9</color>
+    <color name="d_daily_hadis_bg">#FFAB66</color>
+    <color name="d_daily_hadis_icon">#CD874E</color>
+    <color name="d_gradient_one">#6C4CE2</color>
+    <color name="d_gradient_two">#3C239B</color>
+
+</resources>
