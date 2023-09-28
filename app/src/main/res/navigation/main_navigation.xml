@@ -9,5 +9,15 @@
         android:id="@+id/mainFragment"
         android:name="uz.bismillah.siyrat.presentation.main.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main"/>
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="uz.bismillah.siyrat.presentation.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/casesFragment"
+        android:name="uz.bismillah.siyrat.presentation.cases.CasesFragment"
+        android:label="CasesFragment"
+        tools:layout="@layout/fragment_cases" />
 </navigation>

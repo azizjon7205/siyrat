@@ -25,6 +25,7 @@
             app:navGraph="@navigation/main_navigation" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -41,6 +42,7 @@
                 android:padding="8dp"
                 app:itemBackground="@drawable/bg_bottom_nav_selector"
                 app:itemIconTint="@color/bottom_nav_item_color"
+                app:labelVisibilityMode="selected"
                 app:itemTextColor="@color/s_white"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"

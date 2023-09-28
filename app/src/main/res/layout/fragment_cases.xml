@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/main"
+        android:text="@string/cases"
         android:textColor="@color/d_main_text"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
