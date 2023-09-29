@@ -28,7 +28,7 @@ class DetailsInfoFragment :
         binding.toolbarFragment.apply {
             // Kerakli Title set qilinadi.
             tvTitle.isSelected = true
-            tvTitle.text = "Lorem impsum dolor sit amit iofhiouhe"
+            tvTitle.text = "Lorem impsum dolor sit amit"
             // Right ga hohlagan iconkani set qilib yoki invisible, visible qilib, clickni boshqarsa bo`ladi.
             ivRight.setOnClickListener {
 
