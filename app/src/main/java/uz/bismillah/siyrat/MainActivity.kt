@@ -7,6 +7,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.setupWithNavController
+import androidx.navigation.ui.navigateUp
 import dagger.hilt.android.AndroidEntryPoint
 import uz.bismillah.siyrat.databinding.ActivityMainBinding
 import uz.bismillah.siyrat.utils.extensions.gone
@@ -48,5 +49,9 @@ class MainActivity : AppCompatActivity() {
                 else -> binding.bottomNavigationView.gone()
             }
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }
