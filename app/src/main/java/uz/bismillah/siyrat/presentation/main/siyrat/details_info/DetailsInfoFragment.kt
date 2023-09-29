@@ -18,15 +18,9 @@ class DetailsInfoFragment :
         binding.apply {
             tvInfo.text = "1-Hadis"
             tvShortInfo.text =
-                "Dalil ipsum dolor sit amet consectetur. Amet eros feugiat arcu pellentesque aliquam."
+                "Dalil ipsum dolor sit amet consectetur."
             tvLongInfo.text =
-                "Lorem ipsum dolor sit amet consectetur. Tortor vestibulum tristique mauris amet egestas nunc sed volutpat nisl. Non nibh elementum id nascetur iaculis. Eu ut ullamcorper ut dictum morbi hendrerit suspendisse. Sed scelerisque amet nunc feugiat nibh. \n\n" +
-                        "Semper ut tortor condimentum lorem. Tincidunt tempus velit aliquam nibh non sed. Aliquet viverra elementum massa integer. Venenatis nec malesuada neque amet maecenas ullamcorper donec. Vitae lacinia cursus est id et ridiculus et ut. Pellentesque faucibus gravida egestas.\n\n" +
-                        "Semper ut tortor condimentum lorem. Tincidunt tempus velit aliquam nibh non sed. Aliquet viverra elementum massa integer. Venenatis nec malesuada neque amet maecenas ullamcorper donec. Vitae lacinia cursus est id et ridiculus et ut. Pellentesque faucibus gravida egestas.\n\n" +
-                        "Semper ut tortor condimentum lorem. Tincidunt tempus velit aliquam nibh non sed. Aliquet viverra elementum massa integer. Venenatis nec malesuada neque amet maecenas ullamcorper donec. Vitae lacinia cursus est id et ridiculus et ut. Pellentesque faucibus gravida egestas.\n\n" +
-                        "Semper ut tortor condimentum lorem. Tincidunt tempus velit aliquam nibh non sed. Aliquet viverra elementum massa integer. Venenatis nec malesuada neque amet maecenas ullamcorper donec. Vitae lacinia cursus est id et ridiculus et ut. Pellentesque faucibus gravida egestas.\n\n" +
-                        "Semper ut tortor condimentum lorem. Tincidunt tempus velit aliquam nibh non sed. Aliquet viverra elementum massa integer. Venenatis nec malesuada neque amet maecenas ullamcorper donec. Vitae lacinia cursus est id et ridiculus et ut. Pellentesque faucibus gravida egestas.\n\n" +
-                        "Semper ut tortor condimentum lorem. Tincidunt tempus velit aliquam nibh non sed. Aliquet viverra elementum massa integer. Venenatis nec malesuada neque amet maecenas ullamcorper donec. Vitae lacinia cursus est id et ridiculus et ut. Pellentesque faucibus gravida egestas."
+                "Lorem ipsum dolor sit amet consectetur."
         }
     }
 
