@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import dagger.hilt.android.AndroidEntryPoint
 import uz.bismillah.siyrat.databinding.ActivityMainBinding
@@ -16,6 +17,15 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
+    val appBarConfiguration by lazy {
+        AppBarConfiguration(
+            setOf(
+                R.id.mainFragment,
+                R.id.casesFragment,
+                R.id.settingsFragment
+            )
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

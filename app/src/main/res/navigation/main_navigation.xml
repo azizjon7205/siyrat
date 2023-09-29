@@ -9,7 +9,16 @@
         android:id="@+id/mainFragment"
         android:name="uz.bismillah.siyrat.presentation.main.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_detailsInfoFragment"
+            app:destination="@+id/detailsInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsInfoFragment"
+        android:name="uz.bismillah.siyrat.presentation.main.siyrat.details_info.DetailsInfoFragment"
+        android:label="DetailsInfoFragment"
+        tools:layout="@layout/fragment_details_info" />
     <fragment
         android:id="@+id/settingsFragment"
         android:name="uz.bismillah.siyrat.presentation.settings.SettingsFragment"
