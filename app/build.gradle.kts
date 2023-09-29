@@ -56,4 +56,6 @@ dependencies {
     // dagger hilt
     implementation("com.google.dagger:hilt-android:2.47")
     kapt("com.google.dagger:hilt-android-compiler:2.47")
+    //Pager Indicator
+    implementation("ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.2.1")
 }

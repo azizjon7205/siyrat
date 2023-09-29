@@ -3,12 +3,13 @@
     <!--Dynamic Colors-->
     <color name="d_primary">#724EF8</color>
     <color name="d_secondary">#AD97FF</color>
-    <color name="d_main_text">#DDDDDD</color>
+    <color name="d_main_text">#FFFFFF</color>
     <color name="d_secondary_text">#DDDDDD</color>
     <color name="d_main_bg">#040C23</color>
     <color name="d_secondary_bg">#121B37</color>
     <color name="d_bottom_nav_view_icon">#798096</color>
     <color name="d_bottom_nav_view_bg">#121B37</color>
+    <color name="d_no_btn_color">#2B3659</color>
     <color name="d_siyrat_bg">#9985FF</color>
     <color name="d_siyrat_icon">#7254FF</color>
     <color name="d_salovat_bg">#00CC7E</color>
@@ -17,5 +18,9 @@
     <color name="d_daily_hadis_icon">#CD874E</color>
     <color name="d_gradient_one">#6C4CE2</color>
     <color name="d_gradient_two">#3C239B</color>
+    <color name="d_vp_item_gradient_1">#6C4CE2</color>
+    <color name="d_vp_item_gradient_2">#3C239B</color>
+    <color name="d_vp_item_gradient_border">#33FFFFFF</color>
+    <color name="d_unselected_dots_color">#DDDDDD</color>
 
 </resources>
