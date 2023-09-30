@@ -10,6 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import uz.bismillah.siyrat.MainActivity
+import uz.bismillah.siyrat.data.resourse.local.data_store.SharedPreferencesHelper
 import uz.bismillah.siyrat.utils.fragment_toolbar.ToolbarManager
 
 typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
@@ -22,6 +23,7 @@ abstract class BaseMainFragment<VB : ViewBinding>(
     val binding get() = _binding!!
 
     lateinit var navController: NavController
+    val shared by lazy { SharedPreferencesHelper(context = requireActivity()) }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -53,5 +55,4 @@ abstract class BaseMainFragment<VB : ViewBinding>(
         _binding = null
         super.onDestroyView()
     }
-
 }
