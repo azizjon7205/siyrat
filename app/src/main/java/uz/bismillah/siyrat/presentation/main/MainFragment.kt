@@ -25,6 +25,10 @@ class MainFragment : BaseMainFragment<FragmentMainBinding>(FragmentMainBinding::
     private fun setUpToolbar(){
         binding.toolbarFragment.apply {
             tvTitle.text = "Shanba, 23 Sentyabr 2023"
+            ivRight.setOnClickListener {
+                // TODO: Remove following line later, it  is just for testing
+                navController.navigateSafe(R.id.action_mainFragment_to_dailyHadithFragment)
+            }
         }
     }
 
