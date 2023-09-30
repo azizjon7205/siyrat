@@ -53,6 +53,10 @@ class MainFragment : BaseMainFragment<FragmentMainBinding>(FragmentMainBinding::
             cvDailyHadis.setOnClickListener {
                 navController.navigateSafe(R.id.action_mainFragment_to_dailyHadithFragment)
             }
+
+            cvSalovat.setOnClickListener {
+                navController.navigateSafe(R.id.action_mainFragment_to_salovatFragment)
+            }
         }
         mainHadithAdapter.setMoreBtnListener {data->
             val newData = data.copy(
