@@ -48,7 +48,10 @@ class MainFragment : BaseMainFragment<FragmentMainBinding>(FragmentMainBinding::
             )
             llLetSayHello.tvTitle.text = resources.getString(R.string.let_is_say_hello)
             cvSiyrat.setOnClickListener {
-                navController.navigateSafe(R.id.action_mainFragment_to_siyratFragment)
+                navController.navigateSafe(R.id.action_mainFragment_to_siyratHadithFragment)
+            }
+            cvDailyHadis.setOnClickListener {
+                navController.navigateSafe(R.id.action_mainFragment_to_dailyHadithFragment)
             }
         }
         mainHadithAdapter.setMoreBtnListener {data->
@@ -125,7 +128,7 @@ class MainFragment : BaseMainFragment<FragmentMainBinding>(FragmentMainBinding::
             tvTitle.text = "Shanba, 23 Sentyabr 2023"
             ivRight.setOnClickListener {
                 // TODO: Remove following line later, it  is just for testing
-                navController.navigateSafe(R.id.action_mainFragment_to_dailyHadithFragment)
+//                navController.navigateSafe(R.id.action_mainFragment_to_dailyHadithFragment)
             }
         }
     }

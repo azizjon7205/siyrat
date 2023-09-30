@@ -13,6 +13,8 @@ import uz.bismillah.siyrat.R
 import uz.bismillah.siyrat.data.resourse.network.response.Hadith
 import uz.bismillah.siyrat.databinding.FragmentHadithListForCasesBinding
 import uz.bismillah.siyrat.presentation.cases.adapter.HadithAdapter
+import uz.bismillah.siyrat.presentation.cases.adapter.StateAdapter
+import uz.bismillah.siyrat.presentation.cases.model.State
 import java.util.Calendar
 
 
@@ -35,15 +37,15 @@ class HadithListForCasesFragment : BaseCasesFragment<FragmentHadithListForCasesB
     }
 
     private fun fetchData(path: String?) {
-        val adapter = HadithAdapter()
+        val adapter = StateAdapter()
         val firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
         val case = firestore.collection("holatlar").document(path ?: "").collection("xadis")
         case.get()
             .addOnSuccessListener {
                 //TODO: Stop loading here
 
-                Log.d("HadithListForCasesFragment >> ", "Data: ${it.toObjects(Hadith::class.java)}")
-                val hadithList = it.toObjects(Hadith::class.java)
+                Log.d("HadithListForCasesFragment >> ", "Data: ${it.toObjects(State::class.java)}")
+                val hadithList = it.toObjects(State::class.java)
                 adapter.submitList(hadithList)
                 binding.rvHadith.adapter = adapter
             }

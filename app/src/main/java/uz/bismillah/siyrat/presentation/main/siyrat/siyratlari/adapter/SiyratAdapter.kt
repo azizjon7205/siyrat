@@ -22,6 +22,9 @@ class SiyratAdapter : ListAdapter<SiyratData, SiyratAdapter.VH>(ITEM_DIFF) {
         fun bindData(data: SiyratData) {
             binding.apply {
                 tvTitle.text = data.name
+                root.setOnClickListener {
+                    moreBtn?.invoke(data)
+                }
             }
         }
     }

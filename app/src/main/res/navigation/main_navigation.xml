@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_mainFragment_to_siyratFragment"
             app:destination="@id/siyratFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_siyratHadithFragment"
+            app:destination="@id/siyratHadithFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsInfoFragment"
@@ -58,4 +61,9 @@
         android:id="@+id/salovatFragment"
         android:name="uz.bismillah.siyrat.presentation.main.salovat.SalovatFragment"
         android:label="SalovatFragment" />
+    <fragment
+        android:id="@+id/siyratHadithFragment"
+        android:name="uz.bismillah.siyrat.presentation.main.siyrat.siyratlari.SiyratHadithFragment"
+        android:label="SiyratHadithFragment"
+        tools:layout="@layout/fragment_siyrat_hadith"/>
 </navigation>
