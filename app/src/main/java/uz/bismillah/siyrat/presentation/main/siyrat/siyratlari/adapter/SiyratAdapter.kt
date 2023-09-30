@@ -1,54 +1,50 @@
-package uz.bismillah.siyrat.presentation.main.home.adapter
+package uz.bismillah.siyrat.presentation.main.siyrat.siyratlari.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import uz.bismillah.siyrat.databinding.ItemViewPagerBinding
-import uz.bismillah.siyrat.presentation.main.home.model.MainHadith
+import uz.bismillah.siyrat.databinding.ItemTitleRightArrowBinding
+import uz.bismillah.siyrat.presentation.main.siyrat.siyratlari.model.SiyratData
 
-class VPMainHadithAdapter : ListAdapter<MainHadith, VPMainHadithAdapter.VH>(ITEM_DIFF) {
 
-    private var moreBtn: ((position: MainHadith) -> Unit)? = null
+class SiyratAdapter : ListAdapter<SiyratData, SiyratAdapter.VH>(ITEM_DIFF) {
 
-    fun setMoreBtnListener(f: (position: MainHadith) -> Unit) {
+    private var moreBtn: ((position: SiyratData) -> Unit)? = null
+
+    fun setMoreBtnListener(f: (position: SiyratData) -> Unit) {
         moreBtn = f
     }
 
-    inner class VH(private val binding: ItemViewPagerBinding) :
+    inner class VH(private val binding: ItemTitleRightArrowBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bindData(data: MainHadith) {
+        fun bindData(data: SiyratData) {
             binding.apply {
                 tvTitle.text = data.name
-                tvInfo.text = data.uzbek
-                tvMore.setOnClickListener {
-                    moreBtn?.invoke(data)
-                }
             }
         }
     }
 
     companion object {
-        private val ITEM_DIFF = object : DiffUtil.ItemCallback<MainHadith>() {
+        private val ITEM_DIFF = object : DiffUtil.ItemCallback<SiyratData>() {
             override fun areItemsTheSame(
-                oldItem: MainHadith, newItem: MainHadith,
+                oldItem: SiyratData, newItem: SiyratData,
             ): Boolean {
                 return oldItem.name == newItem.name
             }
 
             override fun areContentsTheSame(
-                oldItem: MainHadith, newItem: MainHadith,
+                oldItem: SiyratData, newItem: SiyratData,
             ): Boolean {
                 return oldItem == newItem
                         && oldItem.name == newItem.name
-                        && oldItem.uzbek == newItem.text
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH = VH(
-        ItemViewPagerBinding.inflate(
+        ItemTitleRightArrowBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
     )
