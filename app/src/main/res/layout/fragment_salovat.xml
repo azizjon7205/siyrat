@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Include your main content fragment or layout here -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <include
+                android:id="@+id/toolbarFragment"
+                layout="@layout/toolbar_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:weightSum="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbarFragment">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/layout_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="323dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_weight="0.65"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_background">
+
+                        <TextView
+                            android:id="@+id/arabic_text"
+                            style="@style/I16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="40dp"
+                            android:gravity="center"
+                            android:paddingHorizontal="4dp"
+                            android:text="ٍٍٍٍ ٱللَّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّد ٱللَّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ"
+                            android:textColor="@color/s_white"
+                            app:layout_constraintBottom_toTopOf="@+id/uzbek_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/uzbek_text"
+                            style="@style/I16"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:paddingHorizontal="4dp"
+                            android:text="Allohumma solli a’la sayyidina Muhammad Allohumma solli Allohumma solli Allohumma solli Allohumma solli "
+                            android:textColor="@color/s_white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layout_counter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0.35"
+                    android:backgroundTint="@color/d_secondary_bg"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_options"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="4dp"
+                            android:src="@drawable/ic_more_vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/main_counter"
+                            style="@style/I18"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="65dp"
+                            android:elevation="0dp"
+                            android:gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/d_main_text"
+                            android:textSize="72sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/daily_counter"
+                            style="@style/I16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="70dp"
+                            android:gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/d_secondary_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/main_counter"
+                            app:layout_constraintStart_toStartOf="@id/main_counter"
+                            app:layout_constraintTop_toBottomOf="@id/main_counter" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:id="@+id/navigation_drawer"
+        android:background="@color/d_secondary_bg"
+        android:layout_gravity="right"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_salovatlar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Salovatlar"
+            android:textColor="@color/d_main_text"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_salovat"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_salovat"
+            app:layout_constraintTop_toBottomOf="@id/tv_salovatlar"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
