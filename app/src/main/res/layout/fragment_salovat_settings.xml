@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".presentation.main.salovat.SalovatSettingsFragment">
+
+    <TextView
+        android:id="@+id/tv_vibration"
+        style="@style/I14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vibratsiya"
+        android:textColor="@color/d_text"
+        app:layout_constraintBottom_toBottomOf="@+id/switch_vibration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/switch_vibration" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_vibration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sound"
+        style="@style/I14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound"
+        android:textColor="@color/d_text"
+        app:layout_constraintBottom_toBottomOf="@+id/switch_sound"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_vibration" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintEnd_toEndOf="@+id/switch_vibration"
+        app:layout_constraintTop_toBottomOf="@+id/switch_vibration" />
+
+    <TextView
+        android:id="@+id/tv_size"
+        style="@style/I14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound"
+        android:textColor="@color/d_text"
+        app:layout_constraintBottom_toBottomOf="@+id/switch_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_sound" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintEnd_toEndOf="@+id/switch_sound"
+        app:layout_constraintTop_toBottomOf="@+id/switch_sound" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

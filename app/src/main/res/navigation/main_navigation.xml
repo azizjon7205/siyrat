@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="uz.bismillah.siyrat.presentation.main.MainFragment"
+        android:name="uz.bismillah.siyrat.presentation.main.home.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <action
@@ -46,4 +46,8 @@
         android:name="uz.bismillah.siyrat.presentation.cases.HadithListForCasesFragment"
         android:label="HadithListForCasesFragment"
         tools:layout="@layout/fragment_hadith_list_for_cases"/>
+    <fragment
+        android:id="@+id/salovatFragment"
+        android:name="uz.bismillah.siyrat.presentation.main.salovat.SalovatFragment"
+        android:label="SalovatFragment" />
 </navigation>

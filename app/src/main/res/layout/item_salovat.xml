@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    android:layout_marginTop="10dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="10dp">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="7dp"
+            android:paddingVertical="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_order_number_salovat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_frame_of_number_salovat" />
+
+            <TextView
+                android:id="@+id/tv_number_salovat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/s_white" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_salovat_uzbek"
+            style="@style/I14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/d_main_text"
+            android:text="Lorem ipsum dolor sit amet consectetur. Sit nisi non diam ultrices a."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/frameLayout"
+            app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
+        <TextView
+            android:paddingTop="4dp"
+            android:id="@+id/tv_salovat_arabic"
+            style="@style/I12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Arabchasi ipsum dolor sit amet consectetur. Integer dolor ultrices amet urna ante rhoncus dan."
+            android:textColor="@color/d_secondary_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_salovat_uzbek"
+            app:layout_constraintTop_toBottomOf="@id/tv_salovat_uzbek" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_salovat_today"
+            android:text="Bugun"
+            style="@style/I12"
+            app:layout_constraintTop_toBottomOf="@id/tv_salovat_arabic"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/tv_salovat_arabic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/I14"
+            android:id="@+id/tv_salovat_today_count"
+            android:textColor="#005E93"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/tv_salovat_today"
+            app:layout_constraintStart_toEndOf="@id/tv_salovat_today"
+            android:layout_marginStart="10dp"
+            android:text="0"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_slash"
+            android:text="/"
+            style="@style/I14"
+            android:textColor="@color/d_main_text"
+            app:layout_constraintStart_toEndOf="@id/tv_salovat_today_count"
+            app:layout_constraintBottom_toBottomOf="@id/tv_salovat_today_count"
+            android:gravity="center"
+            android:paddingHorizontal="2dp"
+         />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/I14"
+            android:id="@+id/tv_salovat_all_count"
+            android:textColor="@color/d_main_text"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/tv_slash"
+            app:layout_constraintTop_toTopOf="@id/tv_salovat_today_count"
+            app:layout_constraintBottom_toBottomOf="@id/tv_salovat_today_count"
+            android:text="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
