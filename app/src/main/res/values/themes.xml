@@ -2,10 +2,11 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Siyrat" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Status bar and Navigation bar colors. -->
-        <item name="android:statusBarColor">@color/d_main_bg</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <item name="android:windowAnimationStyle">@null</item>
         <item name="android:windowBackground">@color/d_main_bg</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/d_main_bg</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:navigationBarColor">@color/d_main_bg</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
