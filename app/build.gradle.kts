@@ -66,4 +66,9 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.47")
     //Pager Indicator
     implementation("ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.2.1")
+    //Room
+    implementation ("androidx.room:room-runtime:2.5.2")
+    annotationProcessor ("androidx.room:room-compiler:2.5.2")
+    //DrawerLayout
+    implementation ("androidx.drawerlayout:drawerlayout:1.2.0")
 }
