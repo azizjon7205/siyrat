@@ -6,19 +6,19 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <include
-        android:id="@+id/toolbarLayoutCases"
+        android:id="@+id/toolbarLayoutHadith"
         layout="@layout/toolbar_layout"/>
 
     <LinearLayout
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        android:padding="16dp"
+        android:padding="0dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_cases"
+            android:id="@+id/rv_hadith"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_case_siyrat"
+            tools:listitem="@layout/item_case_hadith"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

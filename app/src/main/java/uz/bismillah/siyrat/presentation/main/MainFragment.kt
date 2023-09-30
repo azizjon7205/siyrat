@@ -1,6 +1,5 @@
 package uz.bismillah.siyrat.presentation.main
 
-import android.view.WindowManager
 import androidx.appcompat.widget.Toolbar
 import dagger.hilt.android.AndroidEntryPoint
 import uz.bismillah.siyrat.R
@@ -25,6 +24,27 @@ class MainFragment : BaseMainFragment<FragmentMainBinding>(FragmentMainBinding::
     private fun setUpToolbar(){
         binding.toolbarFragment.apply {
             tvTitle.text = "Shanba, 23 Sentyabr 2023"
+        }
+    }
+
+    override fun getToolbar(): Toolbar = binding.toolbarFragment.toolbarLayout
+
+    override fun onDetach() {
+        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        super.onDetach()
+    }
+
+    override fun onStop() {
+        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        super.onStop()
+    }
+    private fun setUpToolbar(){
+        binding.toolbarFragment.apply {
+            tvTitle.text = "Shanba, 23 Sentyabr 2023"
+            ivRight.setOnClickListener {
+                // TODO: Remove following line later, it  is just for testing
+                navController.navigateSafe(R.id.action_mainFragment_to_dailyHadithFragment)
+            }
         }
     }
 
