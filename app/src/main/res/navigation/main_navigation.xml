@@ -46,4 +46,9 @@
         android:name="uz.bismillah.siyrat.presentation.cases.HadithListForCasesFragment"
         android:label="HadithListForCasesFragment"
         tools:layout="@layout/fragment_hadith_list_for_cases"/>
+        tools:layout="@layout/fragment_cases" />
+    <fragment
+        android:id="@+id/salovatFragment"
+        android:name="uz.bismillah.siyrat.presentation.main.salovat.SalovatFragment"
+        android:label="SalovatFragment" />
 </navigation>
