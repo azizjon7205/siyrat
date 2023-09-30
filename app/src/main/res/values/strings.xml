@@ -3,4 +3,8 @@
     <string name="main">Asosiy</string>
     <string name="cases">Holatlari</string>
     <string name="settings">Sozlamalar</string>
+    <string name="more">Batafsil</string>
+    <string name="yes">Ha</string>
+    <string name="no">Yo`q</string>
+    <string name="did_you_say_blessing_today">Bugun salovat aytdingizmi?</string>
 </resources>

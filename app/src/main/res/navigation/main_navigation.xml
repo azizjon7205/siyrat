@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_detailsInfoFragment"
             app:destination="@+id/detailsInfoFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_dailyHadithFragment"
+            app:destination="@id/dailyHadithFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsInfoFragment"
@@ -28,5 +31,19 @@
         android:id="@+id/casesFragment"
         android:name="uz.bismillah.siyrat.presentation.cases.CasesFragment"
         android:label="CasesFragment"
-        tools:layout="@layout/fragment_cases" />
+        tools:layout="@layout/fragment_cases" >
+        <action
+            android:id="@+id/action_casesFragment_to_hadithListForCasesFragment"
+            app:destination="@id/hadithListForCasesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dailyHadithFragment"
+        android:name="uz.bismillah.siyrat.presentation.main.daily_hadith.DailyHadithFragment"
+        android:label="DailyHadithFragment"
+        tools:layout="@layout/fragment_daily_hadith"/>
+    <fragment
+        android:id="@+id/hadithListForCasesFragment"
+        android:name="uz.bismillah.siyrat.presentation.cases.HadithListForCasesFragment"
+        android:label="HadithListForCasesFragment"
+        tools:layout="@layout/fragment_hadith_list_for_cases"/>
 </navigation>

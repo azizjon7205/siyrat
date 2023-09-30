@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "11662991361",
+    "project_id": "suyrat-c6557",
+    "storage_bucket": "suyrat-c6557.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11662991361:android:ab7bb74d25c12e496c6000",
+        "android_client_info": {
+          "package_name": "uz.bismillah.siyrat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJwX_-iltv2xPG1cDoAPXK3uMjLPWH1d4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

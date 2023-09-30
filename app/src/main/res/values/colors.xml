@@ -14,6 +14,7 @@
     <color name="d_secondary_bg">#F5F6F7</color>
     <color name="d_bottom_nav_view_icon">#A48E7B</color>
     <color name="d_bottom_nav_view_bg">#FFFFFF</color>
+    <color name="d_no_btn_color">@color/s_white</color>
     <color name="d_siyrat_bg">#E3DDFF</color>
     <color name="d_siyrat_icon">#7254FF</color>
     <color name="d_salovat_bg">#E3F1DA</color>
@@ -22,5 +23,9 @@
     <color name="d_daily_hadis_icon">#D78A4E</color>
     <color name="d_gradient_one">#FF5F5F</color>
     <color name="d_gradient_two">#FFB571</color>
+    <color name="d_vp_item_gradient_1">@color/s_white</color>
+    <color name="d_vp_item_gradient_2">@color/s_white</color>
+    <color name="d_vp_item_gradient_border">@color/d_primary</color>
+    <color name="d_unselected_dots_color">#EAEAEA</color>
 
 </resources>
