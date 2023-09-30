@@ -1,7 +1,9 @@
 package uz.bismillah.siyrat.presentation.main.home
 
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -44,36 +46,33 @@ class MainFragment : BaseMainFragment<FragmentMainBinding>(FragmentMainBinding::
                 if (shared.getTheme() == ThemeModeState.LIGHT.name) R.drawable.tropical
                 else R.drawable.tropical_night
             )
-            btnYes.setOnClickListener {
-                navController.navigateSafe(R.id.action_mainFragment_to_detailsInfoFragment)
-            }
             llLetSayHello.tvTitle.text = resources.getString(R.string.let_is_say_hello)
+            cvSiyrat.setOnClickListener {
+                navController.navigateSafe(R.id.action_mainFragment_to_siyratFragment)
+            }
+        }
+        mainHadithAdapter.setMoreBtnListener {data->
+            val newData = data.copy(
+                arabic = data.arabic ?: "",
+                name = data.name ?: "",
+                text = data.text ?: "",
+                uzbek = data.uzbek ?: ""
+            )
+            navController.navigateSafe(R.id.action_mainFragment_to_detailsInfoFragment, bundleOf("MainHadith" to newData))
         }
     }
 
     private fun setUpMainHadith() {
         val fireStore: FirebaseFirestore = FirebaseFirestore.getInstance()
         val case = fireStore.collection("xadislar")
+        case.get().addOnSuccessListener {
+            val hadithList = it.toObjects(MainHadith::class.java)
+            mainHadithAdapter.submitList(hadithList)
+        }.addOnFailureListener {
+            it.printStackTrace()
+            Toast.makeText(requireContext(), "Failed", Toast.LENGTH_SHORT).show()
+        }
 
-        mainHadithAdapter.submitList(
-            listOf(
-                MainHadith(
-                    name = "namoz",
-                    uzbek = "Abdulloh Ibn Umar raziyallohu anhumodan, Rasululloh sallallohu alayhi va sallam dedilar",
-                    arabic = "عن عبد الله بن عمر رضي الله عنهما قال: قال رسول الله صلى الله عليه وسلم: صلاة الجماعة تفضل صلاة الفرد بسبع وعشرين درجة. \n"
-                ),
-                MainHadith(
-                    name = "safar",
-                    uzbek = "Abu Said Xudriy raziyallohu anhudan, Rasululloh sallallohu alayhi va sallam dedilar",
-                    arabic = "عن أبي سعيد الخدري رضي الله عنه قال: قال رسول الله صلى الله عليه وسلم: لا تشد الرحال إلا إلى ثلاثة مساجد: المسجد الحرام ومسجد الأقصى ومسجدي هذا.\n"
-                ),
-                MainHadith(
-                    name = "buyruqlar",
-                    uzbek = "Abu Hurayra raziyallohu anhudan rivoyat qilinadi: Doʻstim( sallallohu alayhi va sallam) menga uch narsani vasiyat qildilar",
-                    arabic = "ن أبي هريرة رضي الله عنه قال: أوصاني خليلي صلى الله عليه وسلم بثلاث: صيام ثلاثة أيام من كل شهر، وركعتي الضحى، وأن أوتر قبل أن أنام."
-                )
-            )
-        )
         binding.apply {
             layoutManagerBanner =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)

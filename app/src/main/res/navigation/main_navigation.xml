@@ -16,12 +16,20 @@
         <action
             android:id="@+id/action_mainFragment_to_dailyHadithFragment"
             app:destination="@id/dailyHadithFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_siyratFragment"
+            app:destination="@id/siyratFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsInfoFragment"
         android:name="uz.bismillah.siyrat.presentation.main.siyrat.details_info.DetailsInfoFragment"
         android:label="DetailsInfoFragment"
         tools:layout="@layout/fragment_details_info" />
+    <fragment
+        android:id="@+id/siyratFragment"
+        android:name="uz.bismillah.siyrat.presentation.main.siyrat.siyratlari.SiyratFragment"
+        android:label="SiyratFragment"
+        tools:layout="@layout/fragment_siyrat" />
     <fragment
         android:id="@+id/settingsFragment"
         android:name="uz.bismillah.siyrat.presentation.settings.SettingsFragment"
@@ -31,7 +39,7 @@
         android:id="@+id/casesFragment"
         android:name="uz.bismillah.siyrat.presentation.cases.CasesFragment"
         android:label="CasesFragment"
-        tools:layout="@layout/fragment_cases" >
+        tools:layout="@layout/fragment_cases">
         <action
             android:id="@+id/action_casesFragment_to_hadithListForCasesFragment"
             app:destination="@id/hadithListForCasesFragment" />
@@ -40,12 +48,12 @@
         android:id="@+id/dailyHadithFragment"
         android:name="uz.bismillah.siyrat.presentation.main.daily_hadith.DailyHadithFragment"
         android:label="DailyHadithFragment"
-        tools:layout="@layout/fragment_daily_hadith"/>
+        tools:layout="@layout/fragment_daily_hadith" />
     <fragment
         android:id="@+id/hadithListForCasesFragment"
         android:name="uz.bismillah.siyrat.presentation.cases.HadithListForCasesFragment"
         android:label="HadithListForCasesFragment"
-        tools:layout="@layout/fragment_hadith_list_for_cases"/>
+        tools:layout="@layout/fragment_hadith_list_for_cases" />
     <fragment
         android:id="@+id/salovatFragment"
         android:name="uz.bismillah.siyrat.presentation.main.salovat.SalovatFragment"
