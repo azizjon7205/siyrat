@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_mainFragment_to_siyratFragment"
             app:destination="@id/siyratFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_salovatFragment"
+            app:destination="@id/salovatFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsInfoFragment"

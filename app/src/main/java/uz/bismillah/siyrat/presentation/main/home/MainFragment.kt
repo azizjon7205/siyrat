@@ -50,6 +50,10 @@ class MainFragment : BaseMainFragment<FragmentMainBinding>(FragmentMainBinding::
             cvSiyrat.setOnClickListener {
                 navController.navigateSafe(R.id.action_mainFragment_to_siyratFragment)
             }
+
+            cvSalovat.setOnClickListener {
+                navController.navigateSafe(R.id.action_mainFragment_to_salovatFragment)
+            }
         }
         mainHadithAdapter.setMoreBtnListener {data->
             val newData = data.copy(
