@@ -2,11 +2,12 @@ package uz.bismillah.siyrat.data.repository
 
 import android.content.SharedPreferences
 import kotlinx.coroutines.flow.Flow
-import uz.bismillah.siyrat.data.resourse.local.data_store.SharedPref
 import uz.bismillah.siyrat.data.resourse.local.room.Salovat
 import uz.bismillah.siyrat.data.resourse.local.room.SalovatDao
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class SalovatRepository @Inject constructor(
     private val salovatDao: SalovatDao,
     private val sharedPreferences: SharedPreferences
