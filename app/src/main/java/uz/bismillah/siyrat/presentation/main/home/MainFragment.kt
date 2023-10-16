@@ -15,7 +15,9 @@ import uz.bismillah.siyrat.presentation.main.BaseMainFragment
 import uz.bismillah.siyrat.presentation.main.home.adapter.VPMainHadithAdapter
 import uz.bismillah.siyrat.presentation.main.home.model.MainHadith
 import uz.bismillah.siyrat.utils.ThemeModeState
+import uz.bismillah.siyrat.utils.extensions.gone
 import uz.bismillah.siyrat.utils.extensions.navigateSafe
+import java.util.Calendar
 import java.util.Timer
 import java.util.TimerTask
 
@@ -56,6 +58,15 @@ class MainFragment : BaseMainFragment<FragmentMainBinding>(FragmentMainBinding::
 
             cvSalovat.setOnClickListener {
                 navController.navigateSafe(R.id.action_mainFragment_to_salovatFragment)
+            }
+
+            btnNo.setOnClickListener {
+                navController.navigateSafe(R.id.action_mainFragment_to_salovatFragment)
+                clSalavatQ.gone()
+            }
+
+            btnYes.setOnClickListener {
+                clSalavatQ.gone()
             }
         }
         mainHadithAdapter.setMoreBtnListener {data->
@@ -128,6 +139,17 @@ class MainFragment : BaseMainFragment<FragmentMainBinding>(FragmentMainBinding::
     }
 
     private fun setUpToolbar() {
+        var day = when(Calendar.DAY_OF_WEEK){
+            2-> "Dushanba"
+            3-> "Seshanba"
+            4-> "Chorshanba"
+            5-> "Payshanba"
+            6-> "Juma"
+            7-> "Shanba"
+            1-> "Yakshanba"
+            else -> ""
+        }
+
         binding.toolbarFragment.apply {
             tvTitle.text = "Shanba, 23 Sentyabr 2023"
             ivRight.setOnClickListener {
